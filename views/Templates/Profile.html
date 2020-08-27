@@ -1,0 +1,45 @@
+$def with (posts)
+<div class="row">
+    <ul class="c-sidebar col-md-3">
+        <li class= "active list-group-item"><a href="#"><span class="mdi mdi-home"></span>HomeFeed</a></li>
+        <li class= "list-group-item"><a href="#"><span class="mdi mdi-account-circle"></span>Profile</a></li>
+        <li class= "list-group-item"><a href="#"><span class="mdi mdi-email"></span>Messages</a></li>
+        <li class= "list-group-item"><a href="#"><span class="mdi mdi-google-circles-group"></span>Friends</a></li>
+        <li class= "list-group-item"><a href="#"><span class="mdi mdi-google-circles-communities"></span>Communities</a></li>
+        <li class= "list-group-item"><a href="#"><span class="mdi mdi-bell"></span>Notifications</a></li>
+        <br>
+        <li class= "list-group-item"><a href="#"><span class="mdi mdi-settings"></span>Settings</a></li>
+        <li class= "list-group-item"> <a href="#"><span class="mdi mdi-help-circle"></span>Help</a></li>
+    </ul>
+
+    <div class="col-md-6">
+        <div class="profile-header">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg">
+            <div class="profile-list">
+                <ul class="list-group list-group-horizontal ">
+                    <li class="list-group-item"><a href="#">Activity</a></li>
+                    <li class="list-group-item"><a href="#">Info</a></li>
+                    <li class="list-group-item"><a href="#">Code</a></li>
+                    <li class="list-group-item"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        $for post in posts:
+        <div class="post-card">
+            <div class="header">
+                <div class="avatar">
+                    <a href="/profile">$post['user']['name']</a>
+                </div>
+                <div class="content">
+                    $post['content']
+                </div>
+                <div class="footer">
+                    <button class="btn btn-round waves-effect btn-default btn-raised btn-like"><span class="mdi mdi-thumb-up-outline"></span></button>
+                    <button class="btn btn-round waves-effect btn-default btn-raised btn-like"><span class="mdi mdi-comment-text-outline"></span></button>
+                    <button class="btn btn-round waves-effect btn-default btn-raised btn-like"><span class="mdi mdi-share"></span></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
